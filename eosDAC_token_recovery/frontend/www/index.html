@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Token Rescue - eosDAC</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="icon" href="https://eosdac.io/wp-content/uploads/2018/03/cropped-eosdaclogo1-200-jpeg-32x32.jpg" sizes="32x32" />
+	<link rel="icon" href="https://eosdac.io/wp-content/uploads/2018/03/cropped-eosdaclogo1-200-jpeg-192x192.jpg" sizes="192x192" />
+	<link rel="apple-touch-icon-precomposed" href="https://eosdac.io/wp-content/uploads/2018/03/cropped-eosdaclogo1-200-jpeg-180x180.jpg" />
+
+	<script type="text/javascript" src="./js/faq_config.js"></script>
+	<script type="text/javascript" src="./js/bundle.js"></script>
+</head>
+<body>
+	<header>
+		<img class="logo" src="https://eosdac.io/wp-content/uploads/2018/03/eosdaclogo1-200-text-new-250x50.png">
+	</header>
+	<main>
+		<h2>eosDAC Token Rescue (ERC20)</h2>
+		<p>
+			So you forgot to register your ethereum address that holds eosDAC? Don't worry we probably can recover your tokens. Visit this page with an ethereum enabled browser (Chrome with metamask extension). Be sure you logged in with the account that holds eosDAC and paste your EOS public key in the field below. If you don't have an EOS address yet, you can create an EOS account here(link). Your EOS address will be sent to our "Proof Of Ownership" smart contract. This way we can be 100% sure that you own the ethereum address that holds eosDAC. Be aware that your ethereum account needs to have a positive ETH balance because you'll need to pay a small gas fee to interact with the contract. If your eosDAC is stuck on an exchange we sadly can not recover it.
+		</p>
+
+		<div id="eth_connection_status" class="is_loading_text"></div>
+		<div class="wrapper">
+		    <label for="name">EOS Public Key <span>on which you want to receive your eosDAC</span></label>
+		  	<input type="text" id="eospub" >
+		  <button id="send">SEND</button>
+		</div>
+		
+		<div id="etherscan_tx"></div>
+		<div id="ismining">is mining</div>
+
+
+		<h2>Frequently Asked Questions</h2>
+		<ul class="faq"></ul>
+
+
+	</main>
+	<footer>
+		
+	</footer>
+<script type="text/javascript">
+	
+$(function() {
+	
+
+
+
+// faq
+faqs.forEach(function(f){
+	console.log(f.question)
+	let q = $('<li>').addClass('q').html('<img src="./images/arrow.png"> '+f.question);
+	let a = $('<li>').addClass('a').text(f.answer);
+	$('.faq').append(q);
+	$('.faq').append(a);
+});
+
+  $('li.q').on("click", function(){
+
+	$(this).next().slideToggle(500)
+    .siblings('li.a').slideUp();
+    var img = $(this).children('img');
+    $('img').not(img).removeClass('rotate');
+    img.toggleClass('rotate');
+
+  });
+
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>
