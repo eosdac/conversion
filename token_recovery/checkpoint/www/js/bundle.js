@@ -23899,8 +23899,8 @@ class eosDACCheckPoint {
   		this.DOM.eos_pub_key.html('Your address is not registered!').addClass('error');
   	}
 
-  	this.DOM.eosdac_bal.html(arr[1]+' <span>eosDAC</span>');
-  	this.DOM.eos_bal.html(arr[2]+' <span>EOS</span>');
+  	this.DOM.eosdac_bal.html('<b>'+arr[1]+'</b> <span>eosDAC</span>');
+  	this.DOM.eos_bal.html('<b>'+arr[2]+'</b> <span>EOS</span>');
   	this.DOM.result.fadeIn();
  }
 
@@ -23927,8 +23927,15 @@ $(function() {
 	const checkPoint = new eosDACCheckPoint();
 
 	$('#send').on('click', function(){
-		let addr = $('#eth_address').val();
-		checkPoint.checkEthAddress(addr);
+		let addr = $('#eth_address').val().trim();
+		if(Web3.utils.isAddress(addr)){
+
+			checkPoint.checkEthAddress(addr);
+		}
+		else{
+			alert('Your input is not a valid address.');
+		}
+		
 
 
 	});
