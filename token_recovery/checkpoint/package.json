@@ -1,0 +1,15 @@
+{
+  "name": "checkpoint",
+  "version": "1.0.0",
+  "description": "This static webpage will verify if your eosDAC is in a registered wallet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kas",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "web3": "^1.0.0-beta.34"
+  }
+}

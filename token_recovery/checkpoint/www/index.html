@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Checkpoint - eosDAC</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="icon" href="https://eosdac.io/wp-content/uploads/2018/03/cropped-eosdaclogo1-200-jpeg-32x32.jpg" sizes="32x32" />
+	<link rel="icon" href="https://eosdac.io/wp-content/uploads/2018/03/cropped-eosdaclogo1-200-jpeg-192x192.jpg" sizes="192x192" />
+	<link rel="apple-touch-icon-precomposed" href="https://eosdac.io/wp-content/uploads/2018/03/cropped-eosdaclogo1-200-jpeg-180x180.jpg" />
+
+	<script type="text/javascript" src="./js/bundle.js"></script>
+</head>
+<body>
+	<header>
+		<img class="logo" src="https://eosdac.io/wp-content/uploads/2018/03/eosdaclogo1-200-text-new-250x50.png">
+	</header>
+
+	<main>
+		<h2>eosDAC Checkpoint</h2>
+		<p>
+			Verify if your eosDAC is in a registered wallet.
+		</p>
+
+		<div class="wrapper">
+		    <label for="eth_address">Your Eth Address <span>that holds eosDAC (or EOS)</span></label>
+		  	<input type="text" id="eth_address" name="eth_address" >
+		  	<button id="send">CHECK</button>
+		</div>
+
+		<div id="result">
+			<div id="eos_pub_key"></div>
+			Your wallet contains:
+			<div id="eosdac_bal"></div>
+			<div id="eos_bal"></div>
+		</div>
+		<div id="is_loading"></div>
+
+	</main>
+<!-- 	<footer>
+		
+	</footer> -->
+<script type="text/javascript">
+	
+$(function() {
+	
+
+});
+
+</script>
+</body>
+</html>

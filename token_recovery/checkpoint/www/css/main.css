@@ -1,0 +1,140 @@
+body{
+	background-color: #6EC1E4;
+	margin:0;
+	font-family: Lato, Helvetica, Arial, sans-serif;
+
+}
+header{
+	background-color: #fff;
+	height:100px;
+	line-height:100px;
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+main{
+	margin:0 auto;
+  width:700px;
+}
+footer{
+	height:50px;
+	width:100%;
+	background-color: #fff;
+}
+ul, li{
+  list-style-type: none;
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+}
+h2{
+	color:#24404C;
+	margin-top:50px;
+}
+h2:before {
+    content: "";
+    display: block;
+    background: url("../images/eosdac_green_white_outline.png") no-repeat;
+    background-size: 40px;
+
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: -6px 8px 0 0;
+}
+
+button{
+	background-color: #5CB85C;
+  display:block;
+	color:white;
+	/*font-weight: bold;*/
+	letter-spacing: 1px;
+	outline: none;
+	border:1px solid green;
+	height: 30px;
+	border-radius: 5px;
+	cursor:pointer;
+	box-shadow: inset 0 -5px 8px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+
+
+}
+button:hover{
+	box-shadow: inset 0 -5px 8px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2);
+}
+
+
+#result{
+  display:none;
+  margin-top:30px;
+}
+#result span{
+  font-size:11px;
+}
+
+
+.success{
+	color:green;
+	font-weight: bold;
+}
+.error{
+	color:red;
+}
+
+.logo{
+	width:200px;
+	display:inline-block;
+	margin-left:20px;
+}
+#is_loading{
+  display:none;
+	background: url("../images/grid_loader.svg") no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100px;
+
+    width: 100px;
+    height: 100px;
+}
+
+
+/*animation: spin 4s linear infinite;*/
+
+
+input{
+  margin-bottom:10px;
+    position: relative;
+    display:inline-block;
+    width: 460px;
+    height:50px;
+    line-height:50px;
+    font-family: "verdana";
+    font-weight: 400;
+    font-size: 12px;
+    text-indent: 15px;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+}
+
+input:focus{
+    /*text-indent: 12px;*/
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2);
+}
+
+label{
+    display: block;
+    position: static;
+    margin: 0;
+    padding: 0;
+    color:#24404C;
+    font-weight: bold;
+    margin-bottom:3px;
+    font-size: 18px;
+}
+label  span{
+	font-size:10px;
+}
+
+
+
