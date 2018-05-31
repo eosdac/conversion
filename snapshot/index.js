@@ -64,7 +64,11 @@ class eosDacTool {
 				console.time('t2');
 
 				// let mapper = addr => self.getBalance(addr).then(r => [addr,r]).then( s => self.getEosKeyFromAddress(addr).then(p => s.concat(p?p:'unregistered') ));
-				let mapper = addr => self.getBalance(addr).then(r => [addr,r]).then( s => self.getEosKeyFromAddress(addr).then(p => s.concat(p) )).then(x => self.printToConsole(x));
+				let mapper = addr => self.getBalance(addr)
+					.then(eosdacbal => [addr,eosdacbal])
+					.then( s => self.getEosKeyFromAddress(addr).then(eoskey => s.concat(eoskey) )
+					.then(q => self.is_contract(addr).then(iscontract => q.concat(iscontract) ) ))
+					.then(x => self.printToConsole(x));
 
 				pMap(temp, mapper, {concurrency: self.speed}).then(result => {
 					temp = null;
@@ -127,6 +131,11 @@ class eosDacTool {
 		});
 	});
 	
+  }
+
+  is_contract(addr){
+  	return this.web3.eth.getCode(addr).then( res => {return res=='0x' ? false : true })
+         .catch( e => { throw new Error(e)} );
   }
 
   getEosKeyFromAddress(addr){
