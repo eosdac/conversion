@@ -1,6 +1,8 @@
 const secp256k1 = require('secp256k1');
 const ecc = require('eosjs-ecc');
+const colors = require('colors/safe');
 var etherscan = require('etherscan-api').init('CBBCW64JQU2PNP87PJ4J5PA9XURRIF749G');
+
 
 const Web3 = require('web3');
 var web3 = new Web3();
@@ -27,12 +29,15 @@ class genFallback{
 		let accountname = "xxx.eosdac";
 		this.result.push([addr, eoskey]);
 
-		console.log(addr+' -> '+eoskey+' -> '+accountname);
+		console.log(colors.green(addr+' -> '+eoskey+' -> '+accountname) );
 	}
 
 	get_first_sent_transacion_from_address(addr){
 		//get the first transaction sent from the address (from === address)
 		//if there is a tx initiated by the address get the txhash
+		//we use the etherscan api for getting all tx of the address... 
+		//little slow but it prevents us for not having to loop through all the blocks which is slower... 
+		
 		return etherscan.account.txlist(addr, 0, 'latest', 'asc')
 		.then(function(list){
 			list = list.result;
@@ -84,7 +89,8 @@ class genFallback{
 	}
 
 	generate_eos_accountname(){
-
+		//something deterministic here
+		//idea: use timestamp of first received transaction + 2 last chars of eth address + .eosDAC
 	}
 
 
@@ -96,7 +102,4 @@ class genFallback{
 let test = new genFallback();
 
 test.doit('0x9693E022E4b32d15e6C0F0EF81b5E10efD359377');
-
-// test.get_first_sent_transacion_from_address('0x9693E022E4b32d15e6C0F0EF81b5E10efD359377')
-// 	.then(txhash => {test.get_pubkey_from_tx(txhash).then(pubkey => test.convert_ethpub_to_eospub(pubkey))} )
 	
