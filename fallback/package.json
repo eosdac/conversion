@@ -1,0 +1,17 @@
+{
+  "name": "fallback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eosjs-ecc": "^4.0.1",
+    "etherscan-api": "^8.0.5",
+    "secp256k1": "^3.5.0",
+    "web3": "^1.0.0-beta.34"
+  }
+}
