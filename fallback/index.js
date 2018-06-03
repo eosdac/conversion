@@ -2,29 +2,24 @@ const secp256k1 = require('secp256k1');
 const ecc = require('eosjs-ecc');
 const base32 = require('base32');
 const colors = require('colors/safe');
-var etherscan = require('etherscan-api').init('CBBCW64JQU2PNP87PJ4J5PA9XURRIF749G');
+const etherscan = require('etherscan-api').init('CBBCW64JQU2PNP87PJ4J5PA9XURRIF749G');
 const fs = require('fs');
-
-// const readFile = util.promisify(fs.readFile);
 
 const Web3 = require('web3');
 
-var testinput =['0xC426c7d9860b4DF1c6D0cD5507DD49A42E53cE6C',
-  '0x293b27f1aD19f888941a2Ec1e818fE674F5E0419',
-  '0x506b2565e96f8606A5247618b48a188C2f7C305a',
-  '0x03F901030aCcD0BfE0dd5437861A33dB9c11F145',
-  '0xD331F7C1E812dA92ba7484368315fD2Cda9e009f',
-  '0x9e4323D760dF887779729f63fD7F8391067Df67A',
-  '0x2226590c78F9aeaFec58C49B6ae4974362fd9E35',
-  '0x981Ce18b52787c0c4E03D9273db22373FF084DfB',
-  '0xA238819b19DbaeF71C0cb91fd743b4Eb5C03e867',
-  '0x93BB955ac8270B27E29618545Cd9Ff3DE834B222',
-  '0x08dE91d9D663ED47867020343cA48BF3005f613B',
-  '0x39370CA82B8efA2B6E4875fe24dd84fF988402fb',
-  '0x69c8f479F5c9aB4bae7e566CeA29c8D406262fD0'];
-
-
-
+// var testinput =['0xC426c7d9860b4DF1c6D0cD5507DD49A42E53cE6C',
+//   '0x293b27f1aD19f888941a2Ec1e818fE674F5E0419',
+//   '0x506b2565e96f8606A5247618b48a188C2f7C305a',
+//   '0x03F901030aCcD0BfE0dd5437861A33dB9c11F145',
+//   '0xD331F7C1E812dA92ba7484368315fD2Cda9e009f',
+//   '0x9e4323D760dF887779729f63fD7F8391067Df67A',
+//   '0x2226590c78F9aeaFec58C49B6ae4974362fd9E35',
+//   '0x981Ce18b52787c0c4E03D9273db22373FF084DfB',
+//   '0xA238819b19DbaeF71C0cb91fd743b4Eb5C03e867',
+//   '0x93BB955ac8270B27E29618545Cd9Ff3DE834B222',
+//   '0x08dE91d9D663ED47867020343cA48BF3005f613B',
+//   '0x39370CA82B8efA2B6E4875fe24dd84fF988402fb',
+//   '0x69c8f479F5c9aB4bae7e566CeA29c8D406262fD0'];
 
 class genFallback{
 
@@ -33,13 +28,11 @@ class genFallback{
 	  this.initfilestream();
 	  this.inputfile = './input.csv'; //one column with eth addresses.
 
-	  this.FROMBLOCK = 5500000; //contract creation block: 5521001 5447345    5191456 5191455-5500000
+	  this.FROMBLOCK = 5500000; //contract creation block
       this.TOBLOCK =   5500050; //latest or contract freeze block
       this._setConnProvider("https://mainnet.infura.io/3pwc8IbEcX85hRFzSVoi", "HttpProvider");
       this.contracts = {};
       this._initContracts();
-
-
 
 	}
 
@@ -50,10 +43,9 @@ class genFallback{
 		console.log(colors.blue.bold.underline('Generating fallback keys and account names:'));
 
 		this.input = await this.readFile(this.inputfile);
-		// console.log(this.input);
-		// return false;
 
 		for (let i=0; i < this.input.length; i++) {
+
 			this.input[i] = this.input[i].trim();
 			let eoskey;
 			let txhash = await this.get_first_sent_transacion_from_address(this.input[i]);
@@ -162,7 +154,7 @@ class genFallback{
 					console.log(error);
 					return false;
 				}
-				let temp = new Set();//only keep unique entries, order does not matter.
+				let temp = new Set();//only keep unique entries
 
 				console.log('Found '+colors.bold(events.length)+' Transfer events.');
 
@@ -210,7 +202,7 @@ class genFallback{
 		// console.log(this.web3.providers);
 	  }
 
-	  readFile(csvFilePath){
+	 readFile(csvFilePath){
 		const csv=require('csvtojson')
 		return csv({noheader:true,output: "line"})
 		.fromFile(csvFilePath)
