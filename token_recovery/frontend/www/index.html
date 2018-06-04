@@ -19,18 +19,24 @@
 	<main>
 		<h2>eosDAC Token Rescue (ERC20)</h2>
 		<p>
-			So you forgot to register your ethereum address that holds eosDAC? Don't worry we probably can recover your tokens. Visit this page with an ethereum enabled browser (Chrome with metamask extension). Be sure you logged in with the account that holds eosDAC and paste your EOS public key in the field below. If you don't have an EOS address yet, you can create an EOS account here(link). Your EOS address will be sent to our "Proof Of Ownership" smart contract. This way we can be 100% sure that you own the ethereum address that holds eosDAC. Be aware that your ethereum account needs to have a positive ETH balance because you'll need to pay a small gas fee to interact with the contract. If your eosDAC is stuck on an exchange we sadly can not recover it.
+			So you forgot to register your ethereum address that holds eosDAC and not have an eos fallback key? Don't worry we probably can recover your tokens. Visit this page with an ethereum enabled browser (Chrome with metamask extension). Be sure you logged in with the ethereum address that holds eosDAC and paste your EOS accountname in the field below. If you don't have an EOS account yet, you'll first need to create one here-link. If your eosDAC is stuck on an exchange and you don't own the private key, we sadly can not recover it.
 		</p>
 
-		<div id="eth_connection_status" class="is_loading_text"></div>
-		<div class="wrapper">
-		    <label for="name">EOS Public Key <span>on which you want to receive your eosDAC</span></label>
-		  	<input type="text" id="eospub" >
-		  <button id="send">SEND</button>
+		<div style="min-height:175px">	
+			<div id="metamask_not_detected" style="display:none;"><img src="./images/metamask_not_detected.png"></div>
+
+			<div id="metamask_detected" style="display:none">
+				<div id="eth_connection_status" class="is_loading_text" style="margin-bottom:20px;font-size:12px"></div>
+				<div class="wrapper">
+				    <label for="name">EOS accountname <span>on which you want to receive your eosDAC</span></label>
+				  	<input type="text" id="eospub" >
+				  <button id="send">SEND</button>
+				</div>
+				
+				<div id="etherscan_tx"></div>
+				<div id="ismining">is mining</div>
+			</div>
 		</div>
-		
-		<div id="etherscan_tx"></div>
-		<div id="ismining">is mining</div>
 
 
 		<h2>Frequently Asked Questions</h2>
@@ -50,7 +56,7 @@ $(function() {
 
 // faq
 faqs.forEach(function(f){
-	console.log(f.question)
+	// console.log(f.question)
 	let q = $('<li>').addClass('q').html('<img src="./images/arrow.png"> '+f.question);
 	let a = $('<li>').addClass('a').text(f.answer);
 	$('.faq').append(q);

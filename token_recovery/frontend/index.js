@@ -10,16 +10,21 @@ window.addEventListener('load', function() {
     
     if (typeof window.web3 !== 'undefined') {
       console.log('web3 detected');
+      $('#metamask_not_detected').hide();
+      $('#metamask_detected').fadeIn();
       app = new rescueEosDac();
     } 
     else{
         console.log('You don\'t have a web3 browser');
+        $('#metamask_not_detected').fadeIn();
+        $('#metamask_detected').hide();
+
 
     }
 
     //event handlers jquery
     $('#send').on('click', function(){
-        //validate user input = eos pub key
+        //validate user input 
         let value = $('#eospub').val();
         value = value.trim();
         //TODO validate input
@@ -27,7 +32,7 @@ window.addEventListener('load', function() {
           app.sendEosKey(value);
         }
         else{
-          console.log('Please input a valid EOS public key or account name');
+          console.log('Please input a valid EOS accountname');
         }
     });
 
@@ -55,7 +60,7 @@ class rescueEosDac {
      //delay for nicer GUI
      setTimeout(function() {
 
-         self.DOM.connection_status.removeClass('is_loading_text').html('You are connected with address: '+self.account).hide().fadeIn();
+         self.DOM.connection_status.removeClass('is_loading_text').html('You are connected with address: <b>'+self.account+'</b>').hide().fadeIn();
      }, 300);
       
     }
