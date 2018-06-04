@@ -9,11 +9,17 @@ eosdac_genesis_master.csv is the key file that contains ethereum addresses, eos 
 Main statistics on the genesis master
 
 > Total accounts with >0.0001 eosDAC tokens = 93 203 
+
 > Total tokens that will be in the eosDAC genesis contract = 994 902 344.3573
+
 > Total tokens in accounts that have eos keys and contain at least 1 EOS = 887 272 169.2941 (89.18%)
+
 > Total tokens in accounts that have eos keys and contain less than 1 EOS	= 43 580 355.8945 (4.38%)
+
 > Amount of EOS held by eosDAC token holders = 447 685 396.0276 (less than half they held on April 15th)
+
 > Number of accounts with almost exactly the same amount of EOS as eosDAC = 40 829 
+
 > EOS/eosDAC held by these accounts = 129 602 257.1049
 
 
