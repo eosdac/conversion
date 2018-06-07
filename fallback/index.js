@@ -52,7 +52,13 @@ class genFallback{
 
 			if(txhash){
 				let pubkey  = await this.get_pubkey_from_tx(txhash);
-				eoskey = this.convert_ethpub_to_eospub(pubkey);
+				if(pubkey){
+					eoskey = this.convert_ethpub_to_eospub(pubkey);
+				}
+				else{
+					eoskey = "no";
+				}
+				
 			}
 			else{
 				eoskey = "no";
@@ -111,7 +117,9 @@ class genFallback{
 	    .then( tx => {
 	    	// console.log(tx);
 	    	// tx.publicKey="0x3378b571334a643045a90bc9715976173daff9f97433caa4ce7a2a628b007e1dc901a206a7df98c5b4ab41011bc7e9ea62bfb2f2dcf44ffe377bce127200a308";
-
+	    	if( !("publickey" in tx) ){
+	    		return 0;
+	    	}
 	    	// console.log(tx.publicKey);
 	    	return tx.publicKey.slice(2);
 	    } )
