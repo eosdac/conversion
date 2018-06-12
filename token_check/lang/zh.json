@@ -1,0 +1,19 @@
+{
+  "zh": {
+    "language": "中文",
+    "page_title": "eosDAC快照检查工具",
+    "welcome_message": "欢迎来到eosDAC快照检查工具！",
+    "tool_explanation": "使用此表格检查您的EOS和eosDAC令牌余额是否包含在EOS主网络快照中。",
+    "eos_account_name": "EOS帐户名称",
+    "eos_public_key": "EOS公钥",
+    "eos_fallback_public_key": "EOS公钥（Fallback）",
+    "ethereum_address": "以太坊地址",
+    "eos_token_amount": "EOS令牌数量",
+    "eosdac_token_amount": "eosDAC令牌数量",
+    "entry_not_found": "未找到任何条目。 请再试一次。",
+    "submit": "提交",
+    "start_over": "重新开始",
+    "search_value": "EOS公钥，帐户名称或以太坊地址",
+    "no_private_key": "警告：请不要输入您的私钥！"
+  }
+}

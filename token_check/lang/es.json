@@ -1,0 +1,19 @@
+{
+  "es": {
+    "language": "Spanish",
+    "page_title": "Herramienta de comprobación de instantáneas eosDAC",
+    "welcome_message": "Bienvenido a la herramienta de comprobación de instantáneas eosDAC.",
+    "tool_explanation": "Utilice este formulario para verificar si sus balances de tokens EOS y eosDAC se incluyeron en la captura de la red principal de EOS.",
+    "eos_account_name": "Nombre de cuenta EOS",
+    "eos_public_key": "Clave pública EOS",
+    "eos_fallback_public_key": "Clave pública EOS (Fallback)",
+    "ethereum_address": "Dirección de Ethereum",
+    "eos_token_amount": "Cantidad de Token EOS",
+    "eosdac_token_amount": "Cantidad de Token eosDAC",
+    "entry_not_found": "Entradas no encontradas. Inténtalo de nuevo.",
+    "submit": "Enviar",
+    "start_over": "Comenzar nuevamente",
+    "search_value": "Clave pública EOS, nombre de cuenta o dirección Ethereum",
+    "no_private_key": "Advertencia: ¡no ingrese su clave privada!"
+  }
+}

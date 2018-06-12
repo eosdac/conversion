@@ -1,0 +1,19 @@
+{
+  "it": {
+    "language": "Italiano",
+    "page_title": "eosDAC Snapshot Checking Tool",
+    "welcome_message": "Benvenuto nello strumento di verifica degli snapshot di eOSDAC!",
+    "tool_explanation": "Utilizzare questo modulo per verificare se i saldi di token EOS ed eosDAC sono stati inclusi nell'istantanea della rete principale EOS.",
+    "eos_account_name": "Nome account EOS",
+    "eos_public_key": "Chiave pubblica EOS",
+    "eos_fallback_public_key": "Chiave pubblica EOS (fallback)",
+    "ethereum_address": "Indirizzo di Ethereum",
+    "eos_token_amount": "Quantità di token EOS",
+    "eosdac_token_amount": "Quantità di token eosDAC",
+    "entry_not_found": "Nessuna voce trovata. Per favore riprova.",
+    "submit": "Sottoscrivi",
+    "start_over": "Ricomincia",
+    "search_value": "Chiave pubblica EOS, nome account o indirizzo Ethereum",
+    "no_private_key": "Attenzione: per favore non inserire la tua chiave privata!"
+  }
+}

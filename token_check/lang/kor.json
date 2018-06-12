@@ -1,0 +1,19 @@
+{
+  "kor": {
+    "language": "한국어",
+    "page_title": "eosDAC 스냅 샷 검사 도구",
+    "welcome_message": "eosDAC 스냅 샷 검사 도구에 오신 것을 환영합니다!",
+    "tool_explanation": "이 양식을 사용하여 EOS 및 eosDAC 토큰 잔액이 EOS 메인 넷 스냅 샷에 포함되었는지 확인하십시오.",
+    "eos_account_name": "EOS 계정 이름",
+    "eos_public_key": "EOS 공개 키",
+    "eos_fallback_public_key": "EOS 공개 키 (대체)",
+    "ethereum_address": "에테르 주소",
+    "eos_token_amount": "EOS 토큰 금액",
+    "eosdac_token_amount": "eosDAC 토큰 금액",
+    "entry_not_found": "항목을 찾을 수 없습니다. 다시 시도하십시오.",
+    "submit": "제출하기",
+    "start_over": "다시 시도",
+    "search_value": "EOS 공개 키, 계정 이름 또는 Ethereum 주소",
+    "no_private_key": "경고 : 개인 키를 입력하지 마십시오!"
+  }
+}
