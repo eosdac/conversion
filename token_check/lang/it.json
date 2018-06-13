@@ -2,8 +2,8 @@
   "it": {
     "language": "Italiano",
     "page_title": "eosDAC Snapshot Checking Tool",
-    "welcome_message": "Benvenuto nello strumento di verifica degli snapshot di eOSDAC!",
-    "tool_explanation": "Utilizzare questo modulo per verificare se i saldi di token EOS ed eosDAC sono stati inclusi nell'istantanea della rete principale EOS.",
+    "welcome_message": "Benvenuto nello strumento di verifica degli snapshot di eosDAC!",
+    "tool_explanation": "Utilizza questo modulo per verificare se i saldi di token EOS ed eosDAC sono stati inclusi nell'istantanea della rete principale EOS.",
     "eos_account_name": "Nome account EOS",
     "eos_public_key": "Chiave pubblica EOS",
     "eos_fallback_public_key": "Chiave pubblica EOS (fallback)",
