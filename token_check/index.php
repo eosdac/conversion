@@ -92,7 +92,7 @@ CREATE TABLE `eosdac_final_todrop` (
                 $has_results = 1;
                 print '<tr><th>' . $strings['eos_account_name'] . '</th><th>' . $strings['eos_public_key'] . '</th></tr>';
                 print '<tr>';
-                print '<td>' . $value['account_name'] . '</td><td>' . $value['eos_key'] . '</td>';
+                print '<td><a href="https://eospark.com/MainNet/account/' . $value['account_name'] . '">' . $value['account_name'] . '</a></td><td>' . $value['eos_key'] . '</td>';
                 print '</tr>';
                 print '<tr><th>' . $strings['ethereum_address'] . '</th><th>' . $strings['eosdac_token_amount'] . '</th></tr>';
                 print '<tr>';

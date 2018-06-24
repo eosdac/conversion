@@ -9,7 +9,7 @@
     "eos_fallback_public_key": "EOS公钥（Fallback）",
     "ethereum_address": "以太坊地址",
     "eos_token_amount": "EOS令牌数量",
-    "eosdac_token_amount": "eosDAC令牌数量",
+    "eosdac_token_amount": "EOSDAC令牌数量",
     "entry_not_found": "未找到任何条目。 请再试一次。",
     "submit": "提交",
     "start_over": "重新开始",

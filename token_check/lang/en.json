@@ -9,7 +9,7 @@
     "eos_fallback_public_key": "EOS Public Key (Fallback)",
     "ethereum_address": "Ethereum Address",
     "eos_token_amount": "EOS Token Amount",
-    "eosdac_token_amount": "eosDAC Token Amount",
+    "eosdac_token_amount": "EOSDAC Token Amount",
     "entry_not_found": "No entries found. Please try again.",
     "submit": "Submit",
     "start_over": "Start over",

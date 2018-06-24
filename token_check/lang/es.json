@@ -9,7 +9,7 @@
     "eos_fallback_public_key": "Clave pública EOS (Fallback)",
     "ethereum_address": "Dirección de Ethereum",
     "eos_token_amount": "Cantidad de Token EOS",
-    "eosdac_token_amount": "Cantidad de Token eosDAC",
+    "eosdac_token_amount": "Cantidad de Token EOSDAC",
     "entry_not_found": "Entradas no encontradas. Inténtalo de nuevo.",
     "submit": "Enviar",
     "start_over": "Comenzar nuevamente",
