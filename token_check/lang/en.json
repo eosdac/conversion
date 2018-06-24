@@ -1,9 +1,9 @@
 {
   "en": {
     "language": "English",
-    "page_title": "eosDAC Snapshop Checking Tool",
-    "welcome_message": "Welcome to the eosDAC snapshot checking tool!",
-    "tool_explanation": "Use this form to check if your EOS and eosDAC token balances were included in the EOS mainnet snapshot.",
+    "page_title": "eosDAC Snapshop Distribution Checking Tool",
+    "welcome_message": "Welcome to the eosDAC distribution checking tool!",
+    "tool_explanation": "Use this form to check if your eosDAC token balances were transferred to the EOS mainnet.",
     "eos_account_name": "EOS Account Name",
     "eos_public_key": "EOS Public Key",
     "eos_fallback_public_key": "EOS Public Key (Fallback)",
@@ -14,6 +14,8 @@
     "submit": "Submit",
     "start_over": "Start over",
     "search_value": "EOS Public Key, Account Name, or Ethereum Address",
-    "no_private_key": "Warning: please do not enter your private key!"
+    "no_private_key": "Warning: please do not enter your private key!",
+    "eos_transaction": "EOS Transaction",
+    "view_online": "View Online"
   }
 }

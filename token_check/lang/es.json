@@ -14,6 +14,8 @@
     "submit": "Enviar",
     "start_over": "Comenzar nuevamente",
     "search_value": "Clave pública EOS, nombre de cuenta o dirección Ethereum",
-    "no_private_key": "Advertencia: ¡no ingrese su clave privada!"
+    "no_private_key": "Advertencia: ¡no ingrese su clave privada!",
+    "eos_transaction": "Transacción EOS",
+    "view_online": "Ver online"
   }
 }

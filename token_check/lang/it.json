@@ -14,6 +14,8 @@
     "submit": "Sottoscrivi",
     "start_over": "Ricomincia",
     "search_value": "Chiave pubblica EOS, nome account o indirizzo Ethereum",
-    "no_private_key": "Attenzione: per favore non inserire la tua chiave privata!"
+    "no_private_key": "Attenzione: per favore non inserire la tua chiave privata!",
+    "eos_transaction": "Transazione EOS",
+    "view_online": "Visualizza online"
   }
 }

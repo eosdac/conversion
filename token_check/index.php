@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+#error_reporting(E_ALL);
+#ini_set('display_errors', 1);
 
 include 'dbconnect.php';
 include 'include_language.php';
@@ -62,13 +62,16 @@ $error = '';
     // LOOK UP ADDRESS
 
 /*
-CREATE TABLE `eos_snapshot` (
-  `eos_account_name` varchar(100) NOT NULL,
-  `ethereum_address` varchar(400) NOT NULL,
-  `eosdac_token_amount` decimal(60,18) NOT NULL,
-  `eos_token_amount` decimal(60,18) NOT NULL,
-  `eos_public_key` varchar(400) NOT NULL,
-  `eos_fallback_public_key` varchar(400) NOT NULL DEFAULT ''
+CREATE TABLE `eosdac_final_todrop` (
+  `id` int(11) NOT NULL,
+  `eth_address` varchar(42) CHARACTER SET utf8 DEFAULT NULL,
+  `eosdac_tokens` decimal(13,4) DEFAULT NULL,
+  `eos_key` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `account_name` varchar(256) DEFAULT NULL,
+  `isedfallback` int(11) DEFAULT NULL,
+  `iscontract` int(1) NOT NULL,
+  `trx` varchar(80) NOT NULL DEFAULT '',
+  `account_valid` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 */
 
@@ -78,7 +81,7 @@ CREATE TABLE `eos_snapshot` (
             $error = $strings['missing_search_value'];
         }
         if ($error == '') {
-            $query = "SELECT * FROM eos_snapshot WHERE ethereum_address = '" . $search_value . "' OR eos_account_name = '" . $search_value . "' OR eos_public_key = '" . $search_value . "' OR eos_fallback_public_key = '" . $search_value . "'";
+            $query = "SELECT * FROM eosdac_final_todrop WHERE eth_address = '" . $search_value . "' OR account_name = '" . $search_value . "' OR eos_key = '" . $search_value . "'";
             $result = mysqli_query($conn, $query);
             $has_results = 0;
             $info = '';
@@ -87,14 +90,17 @@ CREATE TABLE `eos_snapshot` (
                     print '<table class="table">';
                 }
                 $has_results = 1;
-                print '<tr><th>' . $strings['eos_account_name'] . '</th><th>' . $strings['eos_public_key'] . '</th><th>' . $strings['eos_fallback_public_key'] . '</th></tr>';
+                print '<tr><th>' . $strings['eos_account_name'] . '</th><th>' . $strings['eos_public_key'] . '</th></tr>';
                 print '<tr>';
-                print '<td>' . $value['eos_account_name'] . '</td><td>' . $value['eos_public_key'] . '</td><td>' . $value['eos_fallback_public_key'] . '</td><td>';
+                print '<td>' . $value['account_name'] . '</td><td>' . $value['eos_key'] . '</td>';
                 print '</tr>';
-                print '<tr><th>' . $strings['ethereum_address'] . '</th><th>' . $strings['eos_token_amount'] . '</th><th>' . $strings['eosdac_token_amount'] . '</th></tr>';
+                print '<tr><th>' . $strings['ethereum_address'] . '</th><th>' . $strings['eosdac_token_amount'] . '</th></tr>';
                 print '<tr>';
-                print '<td>' . $value['ethereum_address'] . '</td><td>' . number_format($value['eos_token_amount'],4) . '</td><td>' . number_format($value['eosdac_token_amount'],4) . '</td>';
-                print '</tr>';
+                print '<td>' . $value['eth_address'] . '</td><td>' . number_format($value['eosdac_tokens'],4) . '</td></tr>';
+                print '<tr>';
+        print '<th>' . $strings['eos_transaction'] . '</th><th>' . $strings['view_online'] . '</th></tr>'; 
+        print '<tr>';
+        print '<td>' . $value['trx'] . '</td><td><a href="https://eospark.com/MainNet/tx/' . $value['trx'] . '">EOS Park</a> | <a href="https://eostracker.io/transactions/' . $value['trx'] . '">EOS Tracker</a></td></tr>';
             }
             if ($has_results) {
                 print '</table>';
