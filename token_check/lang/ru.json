@@ -1,0 +1,21 @@
+{
+  "ru": {
+    "language": "Русский",
+    "page_title": "Проверка токенов eosDAC",
+    "welcome_message": "Добро пожаловать в утилиту eosDAC для проверки ваших токенов!",
+    "tool_explanation": "Используйте эту форму, чтобы проверить, были ли ваши токены EOS и eosDAC включены в снапшот сети EOS.",
+    "eos_account_name": "Учетная запись EOS",
+    "eos_public_key": "Открытый ключ EOS",
+    "eos_fallback_public_key": "Открытый ключ EOS (Выпадающий)",
+    "ethereum_address": "Адрес Ethereum",
+    "eos_token_amount": "Количество токенов EOS",
+    "eosdac_token_amount": "Количество токенов eosDAC",
+    "entry_not_found": "Записей не найдено. Пожалуйста, попробуйте еще раз.",
+    "submit": "Отправить",
+    "start_over": "Сначала",
+    "search_value": "Открытый ключ EOS, Учетная запись или Адрес Ethereum",
+    "no_private_key": "Предупреждение: не вводите свой личный ключ!",
+    "eos_transaction": "Сделка EOS",
+    "view_online": "Смотреть онлайн"
+  }
+}
