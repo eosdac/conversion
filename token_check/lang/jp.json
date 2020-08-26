@@ -1,0 +1,19 @@
+{
+  "jp": {
+    "language": "日本語",
+    "page_title": "eosDACスナップショット確認ツール",
+    "welcome_message": "eosDACスナップショット確認ツールへようこそ!",
+    "tool_explanation": "ツールを使って、お持ちのEOSとeosDACトークンがEOSメインネットのスナップショットに含まれているか確認できます。",
+    "eos_account_name": "EOSアカウント名",
+    "eos_public_key": "EOSパブリックキー",
+    "eos_fallback_public_key": "EOSパブリックキー(fallbalck)",
+    "ethereum_address": "Ethereumアドレス",
+    "eos_token_amount": "EOSトークン総量",
+    "eosdac_token_amount": "eosDACトークン総量",
+    "entry_not_found": "該当するものがありません。もう一度試してください。",
+    "submit": "送信",
+    "start_over": "もう一度やり直す",
+    "search_value": "EOSパブリックキー、アカウント名またはEthereumアドレス",
+    "no_private_key": "注意: プライベートキーを入力しないでください!"
+  }
+}
